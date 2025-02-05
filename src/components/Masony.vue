@@ -1,11 +1,10 @@
 <template>
-  <p>Masony555</p>
+
     <div class="items" >
 
     <div class="item" v-for="item in hab" :key="item.key">
-      <div class="content">
-        <img :src="item.url" alt="" class="itemImage">
-      </div>
+        <img :src="item.url" alt="" class="content">
+        <p class="action-gallery">kkk</p>
     </div>
    
 
@@ -27,6 +26,8 @@ export default {
        { 'name':'lap1', 'url':'https://cdnphoto.dantri.com.vn/uO7gg2xIkAKDIJLsEzHDww_j0ZE=/zoom/288_192/2025/02/05/foto-bij-netcongestie-crop-1738756767957.jpeg' },
        { 'name':'lap1', 'url':'https://icdn.dantri.com.vn/zoom/300_200/2025/02/04/ngoaitruongmyreuters-1738663635859.jpg' },
        { 'name':'lap1', 'url':'https://cdnphoto.dantri.com.vn/wY5GZKhuOQB283bqHCTQjiqRROc=/zoom/300_200/2025/02/05/vu-dang-minh-1738756664167.jpg' },
+       {'name': 'l3', 'url': 'https://cdnphoto.dantri.com.vn/s8mbgenQOnl_RymHHGEIUORioLg=/thumb_w/480/thumb-video/short-video/2025/02/05/8568-1738744524328/0_00_00.jpg'},
+       {'name': 'l4', 'url': 'https://cdnphoto.dantri.com.vn/ySXrsKbpP3oz1hMReEE0eN6GmvQ=/zoom/240_160/2024/04/22/bhyt-1713764279210.jpeg'}
       ]
     }
 
@@ -37,24 +38,27 @@ export default {
 <style scoped>
 .items {
   column-count: 3;
-  column-gap: 2px;
+  column-gap: 5px;
+  column-rule-style:double;
+  column-rule:0cqmax;
+  position: relative;
 }
-
-.item {
-  break-inside: avoid;
-}
-
 .content {
  background: #CCC;
   padding: 0px;
   margin-top: 0px;
+  width: 300px;
+  height: auto;
 }
 
 .item:first-child .content {
   margin-top: 0;
 }
 .itemImage {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+}
+.action-gallery {
+  position: absolute;
 }
 </style>

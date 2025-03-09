@@ -6,6 +6,7 @@ import Masonry from '../components/Masonry.vue'
 </script> -->
 
   <template>
+    <Audio />
   <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
     <el-tab-pane label="Masonry" name="first">Masonry
       <p>Show data send from component Child: {{ message }}</p>
@@ -22,6 +23,7 @@ import Masonry from '../components/Masonry.vue'
 import {ref } from 'vue'
 import type { TabsPaneContext } from 'element-plus'
 import Masonry from '../components/Masonry.vue'
+import Audio from '../components/AudioBinding.vue'
 const activeName = ref('first')
 const handleClick = () => {
   console.log(activeName.value);
